@@ -32,7 +32,6 @@ class Book {
   }
 }
 
-// Example usage:
 const myBook = new Book('To Kill a Mockingbird', 'Harper Lee', 1960);
 myBook.displayDetails();
 //Task 3: Create an array to store book objects and implement functions to add new books and search for books by title or author.
@@ -43,21 +42,17 @@ function Book(title, author, pages) {
     this.pages = pages;
 }
 
-// Array to store Book objects
 const library = [];
 
-// Function to add a new book to the library
 function addBook(title, author, pages) {
     const book = new Book(title, author, pages);
     library.push(book);
 }
 
-// Function to search for books by title or author
 function searchBooks(criteria, value) {
     return library.filter(book => book[criteria].toLowerCase().includes(value.toLowerCase()));
 }
 
-// Example usage
 addBook('The Great Gatsby', 'F. Scott Fitzgerald', 180);
 addBook('To Kill a Mockingbird', 'Harper Lee', 281);
 addBook('1984', 'George Orwell', 328);
@@ -85,7 +80,6 @@ function Account(accountNumber, balance, owner) {
     this.owner = owner;
 }
 
-// Example usage:
 const myAccount = new Account('123456', 1000, 'John Doe');
 console.log(myAccount);
 //Task 2: Implement methods within the Account object to deposit and withdraw funds.
@@ -119,7 +113,6 @@ class Account {
   }
 }
 
-// Example usage:
 const myAccount = new Account(100);
 myAccount.deposit(50);  // Deposited: $50. New balance: $150
 myAccount.withdraw(30); // Withdrew: $30. New balance: $120
@@ -138,7 +131,6 @@ function calculateCompoundInterest(principal, rate, timesCompounded, years) {
     return amount;
 }
 
-// Example usage:
 let principal = 1000; // Initial balance
 let rate = 5; // Interest rate in percentage
 let timesCompounded = 4; // Quarterly compounding
